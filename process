@@ -2,9 +2,9 @@ mvn clean package -Dspring.profiles.active=build
 
 move jara file into /root directory 
 
-MYSQL_HOST=jdbc:database-1.cub02uemyl72.us-east-1.rds.amazonaws.com:3306/datastore?createDatabaseIfNotExist=true \
-MYSQL_USERNAME=admin \
-MYSQL_PASSWORD=Alka1234 \
+export MYSQL_HOST=jdbc:mysql://database-1.cub02uemyl72.us-east-1.rds.amazonaws.com:3306/datastore?createDatabaseIfNotExist=true
+export MYSQL_USERNAME=admin
+export MYSQL_PASSWORD=alka1234
 nohup java -jar ./datastore-0.0.7.jar > /var/log/app/nohup.out 2>&1 &
 
 
